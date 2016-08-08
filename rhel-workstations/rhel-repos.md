@@ -61,8 +61,14 @@ subscription-manager repos \
     --enable=rhel-7-server-extras-rpms \
     --enable=rhel-7-server-optional-rpms \
     --enable=rhel-7-server-supplementary-rpms \
-    --enable=rhel-7-server-thirdparty-oracle-java-rpms \
-    --enable=rhel-server-rhscl-7-rpms \
+    --enable=rhel-7-server-thirdparty-oracle-java-rpms
+```
+
+And if a more up to date development stack is desired or required:
+
+```
+subscription-manager repos \
+    --enable=rhel-server-rhscl-7-rpms
 ```
 
 ## RHEL 7: EPEL Repository
@@ -71,7 +77,7 @@ software which is not found in the Red Hat repositories, but maintains an
 aspiration to be enterprise quality. ARCC admininistrators have often used
 EPEL repositories to get additional packages not supported by Red Hat directly.
 
-To install the EPEL repository*, run the following with root permissions and
+To install the EPEL repository, run the following with root permissions and
 follow any on screen instructions:
 
 ```
@@ -89,8 +95,9 @@ yum repolist
 
 **NOTE**: Please be aware that for EPEL to work properly, you must enable the
 optional packages and the extra packages repositories mentioned  above. If the 
-optional repository is not enabled, there are certain packages which will not 
-work appropriately.
+optional packages adn extra packages repositories is not enabled, there are 
+certain packages which will not be able to be installed because of the missing
+dependencies.
 
 ## RHEL 7: ELRepo Repository
 The ELRepo repository is another community driven repository that provides
