@@ -22,7 +22,7 @@ software stacks including GCC, Python, etc.
 
 ```
 subscription-manager repos \
-    --enable=rhel-workstation-rhscl-7-source-rpms
+    --enable=rhel-workstation-rhscl-7-rpms
 ```
 
 ### Servers
