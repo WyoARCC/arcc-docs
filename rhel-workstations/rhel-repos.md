@@ -92,8 +92,8 @@ optional packages and the extra packages repositories mentioned  above. If the
 optional repository is not enabled, there are certain packages which will not 
 work appropriately.
 
-## RHEL 7: ElRepo Repository
-The ElRepo repository is another community driven repository that provides
+## RHEL 7: ELRepo Repository
+The ELRepo repository is another community driven repository that provides
 additional software, generally hardware drivers, to the Red Hat based system.
 Often, things like GPU drivers or printer drivers can be found in ElRepo.
 However, ARCC administrators don't always typically enable this repository
