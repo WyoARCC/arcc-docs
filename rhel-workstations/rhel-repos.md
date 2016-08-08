@@ -4,6 +4,31 @@
 Run the following commands with root priviledges after the machine has 
 been registered with Red Hat.
 
+### Registering the machine
+If the system is not registered, you'll need to have an IT system administrator
+with a Red Hat account register you system at this point. The commands the 
+system administrator needs to run are as follows and follow on screen 
+instructions:
+
+```
+subscription-manager register
+```
+
+and
+
+```
+subscription-manager attach
+```
+
+This may be optionally done in a single step with the following:
+
+```
+subscription-manager register --auto-attach
+```
+
+However, note that the last method may enable repositories that are of no use
+for common workstations or servers. 
+
 ### Workstations
 
 ```
