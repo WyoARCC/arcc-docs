@@ -7,8 +7,8 @@ been registered with Red Hat.
 ### Registering the machine
 If the system is not registered, you'll need to have an IT system administrator
 with a Red Hat account register you system at this point. The commands the 
-system administrator needs to run are as follows and follow on screen 
-instructions:
+system administrator needs to run with root priviledges are as follows and 
+follow on screen instructions:
 
 ```
 subscription-manager register
