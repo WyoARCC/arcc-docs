@@ -72,10 +72,10 @@ subscription-manager repos \
 ```
 
 ## RHEL 7: EPEL Repository
-The EPEL repository is a community driven repository to provided additional
+The EPEL repository is a community driven repository to provide additional
 software which is not found in the Red Hat repositories, but maintains an
 aspiration to be enterprise quality. ARCC admininistrators have often used
-EPEL repositories to get additional packages not supported by Red Hat directly.
+EPEL repositories to get additional packages not supported by Red Hat.
 
 To install the EPEL repository, run the following with root permissions and
 follow any on screen instructions:
@@ -132,3 +132,68 @@ in the Red Hat traditional repositories.
 ## RHEL 7: CUDA GPGPU Processing
 
 TODO
+
+## RHEL 6:
+
+### Workstations
+General recommended repositories are enabled through the subscription manager
+application (``subscription-manager``). Please make sure that the system is
+either already register or register it with the below commands with 
+administrator priviledges (i.e., root) and with somebody who has been deemed
+and authorized to register RHEL installations.
+
+To register a system:
+
+```bash
+subscription-manager register
+subscription-manager attach
+```
+
+To enable the basic recommended repositories
+
+```bash
+subscription-manager repos \
+    --enable=rhel-6-workstation-rpms \
+    --enable=rhel-6-workstation-rh-common-rpms \
+    --enable=rhel-6-workstation-extras-rpms \
+    --enable=rhel-6-workstation-optional-rpms \
+    --enable=rhel-6-workstation-supplementary-rpms \
+    --enable=rhel-6-workstation-thirdparty-oracle-java-rpms
+```
+
+### Servers
+```
+For servers, the registration of the system is done just as it is for RHEL
+workstations. However, enabling repositories is slightly different. The
+commands below will enable the recommened RHEL 6 repositories.
+
+```bash
+subscription-manager repos \
+    --enable=rhel-6-server-rpms \
+    --enable=rhel-6-server-rh-common-rpms \
+    --enable=rhel-6-server-extras-rpms \
+    --enable=rhel-6-server-optional-rpms \
+    --enable=rhel-6-server-supplementary-rpms \
+    --enable=rhel-6-server-thirdparty-oracle-java-rpms
+```
+## RHEL 6: EPEL Repository
+The EPEL repository is a community driven repoistory to provide additional
+software which is not found in the Red Hat repositories, but maintains an 
+aspiration to be enterprise quality. ARCC administrators have often used EPEL
+repositories to obtain additional packages not supported by Red Hat.
+
+To install the EPEL repository, run the following with root permissions and
+follow the on screen instructions:
+
+```bash
+yum install \
+    https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+yum update
+```
+
+To verify that the repository is enabled, you may run the following command:
+
+```
+yum repolist
+```
