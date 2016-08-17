@@ -187,7 +187,7 @@ follow the on screen instructions:
 
 ```bash
 yum install \
-    https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
 
 yum update
 ```
@@ -197,3 +197,34 @@ To verify that the repository is enabled, you may run the following command:
 ```
 yum repolist
 ```
+
+## RHEL 6: ELRepo Repository
+The ELRepo repository is another community driven repository that provides 
+additional software, generally hardware drivers, to the Red Hat based system. 
+Often, things like GPU drivers or printer drivers can be found in ElRepo. 
+However, ARCC administrators don't always typically enable this repository 
+unless a special piece of hardware is being used.
+
+Installing the ELRepo repository consist of two parts, importing the key, then 
+activating the repository. Run the following commands with root priviledges:
+
+```bash
+rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+
+yum install \
+    http://www.elrepo.org/elrepo-release-6-6.el6.elrepo.noarch.rpm
+
+yum update
+```
+
+You can verify that the repository is enabled by executing the following:
+
+```bash
+yum repolist
+```
+
+*NOTE*: The ELRepo repository should only be enabled if you are having
+difficulty with hardware and/or need extra drivers that are not contained
+in the Red Hat traditional repositories.
+
+
