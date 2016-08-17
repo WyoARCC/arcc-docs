@@ -1,6 +1,6 @@
 # Configuring Beneficial RHEL Repositories
 
-## RHEL 7: Standard Repositories
+## RHEL 7: Recommended Standard Repositories
 Run the following commands with root priviledges after the machine has 
 been registered with Red Hat.
 
@@ -133,7 +133,7 @@ in the Red Hat traditional repositories.
 
 TODO
 
-## RHEL 6:
+## RHEL 6: Recommended Standard Repositories
 
 ### Workstations
 General recommended repositories are enabled through the subscription manager
