@@ -30,7 +30,20 @@ yum -y install /tmp/ps-pulse-linux-latest-installer.rpm
 Then 
 
 ### RHEL 6
-blah blah blah
+Installing the client on RHEL 6 will use the terminal application to gain
+access to the command line interface. You will need root priviledges to
+execute the following commands:
+
+```bash
+yum -y install \
+    glibc.i686 zlib.i686 nss.i686 webkitgtk.i686 \
+    xulrunn.er.i686 libproxy.i686
+
+yum install /tmp/glib-networking-2.28.6.1-2.2.el6.i686.rpm
+
+yum install /tmp/ps-pulse-linux-latest-installer.rpm
+```
+
 
 ### Fedora 24
 
