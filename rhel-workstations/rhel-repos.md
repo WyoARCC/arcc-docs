@@ -162,7 +162,6 @@ subscription-manager repos \
 ```
 
 ### Servers
-```
 For servers, the registration of the system is done just as it is for RHEL
 workstations. However, enabling repositories is slightly different. The
 commands below will enable the recommened RHEL 6 repositories.
