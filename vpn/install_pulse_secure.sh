@@ -98,7 +98,8 @@ vpn_suse_42() {
         libproxy1-32bit \
         libwebkitgtk-1_0-0-32bit \
         libgthread-2_0-0-32bit \
-        glib-networking-32bit
+        glib-networking-32bit \
+        ca-certificates-cacert
 
     zypper install /tmp/ps-pulse-linux-latest-installer.rpm
 }
