@@ -118,7 +118,24 @@ sudo dpkg -i /tmp/ps-pulse-linux-latest-installer.deb
 ```
 
 ### OpenSUSE 42.1
-TODO
+TODO, this still does not work, but so far the closest results I believe.
+
+```bash
+
+wget -O /tmp/ps-pulse-linux-latest-installer.rpm \
+    https://arcc.uwyo.edu/sw/ps-pulse-linux-latest-installer.rpm
+
+zypper install \
+    glibc-32bit libproxy1-32bit libwebkitgtk-1_0-0-32bit \
+    libgthread-2_0-0-32bit glib-networking-32bit \
+    ca-certificates ca-certificates-cacert ca-certificates-mozilla
+
+zypper install /tmp/ps-pulse-linux-latest-installer.rpm
+
+ln -s /usr/sbin/iptables /sbin/iptables
+ln -s /usr/sbin/ip6tables /sbin/ip6tables
+```
+
 
 ## PulseSecure VPN Configuration
 Start the PulseSecure VPN client graphically using the appropriate launcher.
