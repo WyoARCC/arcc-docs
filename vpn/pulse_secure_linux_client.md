@@ -27,14 +27,18 @@ yum -y install \
 yum -y install /tmp/ps-pulse-linux-latest-installer.rpm
 ```
 
-Then 
-
 ### RHEL 6
 Installing the client on RHEL 6 will use the terminal application to gain
 access to the command line interface. You will need root priviledges to
 execute the following commands:
 
 ```bash
+wget -O /tmp/ps-pulse-linux-latest-installer.rpm \
+    https://arcc.uwyo.edu/sw/ps-pulse-linux-latest-installer.rpm
+
+wget -O /tmp/glib-networking-2.28.6.1-2.2.el6.i686.rpm \
+    https://arcc.uwyo.edu/sw/glib-networking-2.28.6.1-2.2.el6.i686.rpm
+
 yum -y install \
     glibc.i686 zlib.i686 nss.i686 webkitgtk.i686 \
     xulrunn.er.i686 libproxy.i686
@@ -113,6 +117,8 @@ sudo apt-get install \
 sudo dpkg -i /tmp/ps-pulse-linux-latest-installer.deb
 ```
 
+### OpenSUSE 42.1
+TODO
 
 ## PulseSecure VPN Configuration
 Start the PulseSecure VPN client graphically using the appropriate launcher.
@@ -120,7 +126,7 @@ In RHEL 6, the client is located in ``Applications --> Other --> Pulse``. In
 RHEL 7, Fedora 24, and Ubuntu systems, use the graphical search menu and type 
 the keyword "pulse". You may add a connection by clicking the ``+`` button in
 the client. The name is arbitrary and the URL should be:
-https://pulsevpn.uwyo.edu. The next step is to actually attempt to make the
+https://wyosecure.uwyo.edu. The next step is to actually attempt to make the
 connection. Use your UWyo credentials and proceed with the two-factor choice
 for authentication. Upon success, the VPN client will show the connection as 
 connected and offer a "disconnect" button.
