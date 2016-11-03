@@ -136,7 +136,7 @@ ln -s /usr/sbin/iptables /sbin/iptables
 ln -s /usr/sbin/ip6tables /sbin/ip6tables
 
 # Super important step for Pulse
-ln -s /etc/ssl/ca-bundle.crt /etc/ssl/certs/ca-certificates.crt
+ln -s /etc/ssl/ca-bundle.pem /etc/ssl/certs/ca-certificates.crt
 ```
 
 The above steps need to be verified on a new installation of OpenSUSE Leap. These steps have not been verified on Tumbleweed.
