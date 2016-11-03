@@ -142,7 +142,7 @@ sudo dpkg -i /tmp/ps-pulse-linux-latest-installer.deb
 ```
 
 ### OpenSUSE 42.1
-TODO, this still does not work, but so far the closest results I believe.
+YAY! This now works. I used the below commands to install and connect with a fresh installation of OpenSUSE 42.1. Accept any confirmations that may be asked when installing packages with ``zypper``. 
 
 ```bash
 
