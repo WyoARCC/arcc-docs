@@ -134,8 +134,12 @@ zypper install /tmp/ps-pulse-linux-latest-installer.rpm
 
 ln -s /usr/sbin/iptables /sbin/iptables
 ln -s /usr/sbin/ip6tables /sbin/ip6tables
+
+# Super important step for Pulse
+ln -s /etc/ssl/ca-bundle.crt /etc/ssl/certs/ca-certificates.crt
 ```
 
+The above steps need to be verified on a new installation of OpenSUSE Leap. These steps have not been verified on Tumbleweed.
 
 ## PulseSecure VPN Configuration
 Start the PulseSecure VPN client graphically using the appropriate launcher.
